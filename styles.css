@@ -1,0 +1,203 @@
+/*
+- Mobile: 375px
+- Desktop: 1440px
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /*### Primary*/
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+
+    /*### Neutral*/
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+body {
+    padding: 5rem 2rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Karla', -apple-system, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--Light-Gray);
+    background-color: var(--Light-Gray);
+}
+
+h1, h2 {
+    font-weight: 700;
+}
+
+h1 {
+    margin-bottom: 1rem;
+    font-size: 18px;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    font-size: 17px;
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        padding: 0 25rem;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+}
+/* Cards
+=============================*/
+header {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #fff;
+}
+
+main {
+    background-color: var(--Cyan);
+}
+
+footer {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: hsla(179, 62%, 43%, 80%);
+}
+
+.padding {
+    padding: 2rem 1.5rem;
+}
+
+@media screen and (min-width: 1440px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+        "header header"
+        "main footer";
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+
+    header {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    main {
+        border-bottom-left-radius: 5px;
+    }
+
+    footer {
+        border-bottom-right-radius: 5px;
+    }
+
+    .padding {
+        padding: 2.5rem;
+    }
+}
+
+/* Header
+=============================*/
+header h1 {
+    color: var(--Cyan);
+}
+
+header h2 {
+    margin-bottom: 0.5rem;
+    color: var(--Bright-Yellow);
+}
+
+header p {
+    font-size: 13px;
+    line-height: 1.5rem;
+    color: var(--Grayish-Blue);
+}
+
+@media screen and (min-width: 1440px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    header h2 {
+        font-size: 18px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+}
+
+/* Main
+=============================*/
+.centor_align {
+    margin-bottom: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+
+main p:first-child {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+main p:last-child {
+    padding-left: 1rem;
+    opacity: 50%;
+}
+
+main button {
+    margin-top: 1rem;
+    padding: 1rem;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 700;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 3px 20px rgb(0 0 0 / 0.2);
+    color: var(--Light-Gray);
+    background-color: var(--Bright-Yellow);
+}
+
+/* Footer
+=============================*/
+ul {
+    list-style: none;
+}
+
+ul li {
+    font-size: 14px;
+    color: hsla(204, 43%, 93%, 80%);
+    line-height: 1.2rem;
+}
+
+/* Me
+=============================*/
+ .attribution {
+     font-size: 11px;
+     text-align: center;
+     color: black;
+ }
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
